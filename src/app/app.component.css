@@ -1,0 +1,84 @@
+.app {
+  width: 70%;
+  height: auto;
+  margin: 1rem auto;
+}
+
+.app a img {
+  padding: 1rem;
+}
+
+.tesseract {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+h2 {
+  color: #1c8adb;
+  text-align: center;
+}
+
+.lang {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+select {
+  background: transparent;
+  width: 15rem;
+  border: 2px dashed #1c8adb;
+  border-radius: 0.7rem;
+  outline: none;
+  height: 2.5rem;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+button {
+  background: #1c8adb;
+  width: 7rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 0.7rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 130%;
+  transition: all 0.5s;
+}
+
+button:hover {
+  background: #fff;
+  color: #1c8adb;
+  box-shadow: 5px 5px 15px #1c8adb;
+  outline-color: #1f9b3a;
+}
+
+@media (max-width: 768px) {
+  .app {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .app {
+    width: 90%;
+  }
+  .app a img {
+    padding: 0;
+  }
+  .lang {
+    margin: 1rem auto;
+  }
+  select {
+    height: 2rem;
+  }
+  button {
+    height: 2rem;
+    width: 5rem;
+    font-size: 100%;
+  }
+}

@@ -1,0 +1,35 @@
+<div
+  class="uploadfilecontainer"
+  (click)="file.click()"
+  fileDragDrop
+  (onFileDropped)="uploadFile($event)"
+>
+  <input hidden type="file" #file (change)="uploadFile($event.target.files)" />
+  <i class="material-icons">
+    cloud_upload
+  </i>
+  <p style="font-weight: bold;">
+    Drag&Drop or click to upload images
+  </p>
+</div>
+
+<div class="uploaded" *ngIf="imgSrc">
+  <img [src]="imgSrc" />
+  <span
+    class="right-arrow"
+    style="font-size: 200%; font-weight: bold; margin: 0 1rem; color: #1c8adb;"
+    >&rArr;
+  </span>
+  <span
+    class="down-arrow"
+    style="font-size: 200%; font-weight: bold; margin: 1rem 0; color: #1c8adb;"
+    >&dArr;
+  </span>
+  <div class="result">
+    <p>Recognition progress: {{ progress ? progress * 100 : 0 }}%</p>
+    <h2>Result:</h2>
+    <p style="color: #111111;">
+      {{ ocrResult }}
+    </p>
+  </div>
+</div>
